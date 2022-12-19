@@ -28,6 +28,10 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();>Logout</a>
+      </li>
     </ul>
 
     <!-- Right navbar links -->
@@ -900,7 +904,7 @@
 <!-- Bootstrap 4 -->
 <script src="{{asset(../../plugins/bootstrap/js/bootstrap.bundle.min.js)}}"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="{{asset(../../dist/js/adminlte.min.js)}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
 </body>
