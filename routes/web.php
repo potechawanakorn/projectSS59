@@ -20,4 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/jurusan', [jurusanController::class, index]);
+Route::post('/jurusan', [JurusanController::class, 'store']);
+    Route::get('/jurusan/edit/{id}', [JurusanController::class, 'edit']);
+    Route::put('/jurusan/{id}', [JurusanController::class, 'update']);
+    Route::delete('/jurusan/{id}', [JurusanController::class, 'destroy']);
